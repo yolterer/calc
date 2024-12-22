@@ -17,7 +17,7 @@ func Calc(expression string) (float64, error) {
 
 	result, err := evaluate(tokens)
 	if err != nil {
-		return 0, err
+		return 0, errors.New("invalid parentheses")
 	}
 
 	return result, nil
